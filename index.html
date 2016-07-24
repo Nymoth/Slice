@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Slice</title>
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+  <body>
+    <header>
+      <!--span INSIDED-->
+      <nav>
+        <!--ul
+        li Analitycs
+        li Moderation
+        li.active.open Users
+          ul
+            li.active Overview
+            li Custom filter
+            li Create new User
+        li Settings
+        li Blog
+        li Onderzoek
+        li Inklappen
+        
+        -->
+      </nav>
+    </header>
+  </body>
+  <div id="main">
+    <section id="search">
+      <div class="block">
+        <p class="title">Advanced search</p>
+        <div class="content">
+          <div id="filters">
+            <div data-row="0" class="filter-row">
+              <select class="filter">
+                <option value="0">Choose a filter</option>
+                <option value="comments">Comments</option>
+                <option value="usergroup">Usergroup</option>
+                <option value="registration_date">Registration date</option>
+                <option value="last_login">Last login</option>
+                <option value="last_comment">Last comment</option>
+              </select>
+            </div>
+          </div>
+          <button id="add-filter" class="success">Add row</button>
+        </div>
+      </div>
+      <div class="block">
+        <p class="title">Columns</p>
+        <div class="content">
+          <label>
+            <input type="checkbox" value="Usertitle">Usertitle
+          </label>
+          <label>
+            <input type="checkbox" value="Topics">Topics
+          </label>
+          <label>
+            <input type="checkbox" value="Logins">Logins
+          </label>
+          <label>
+            <input type="checkbox" value="Gender">Gender
+          </label>
+          <label>
+            <input type="checkbox" value="Profession">Profession
+          </label>
+          <label>
+            <input type="checkbox" value="Reputation received">Reputation received
+          </label>
+          <label>
+            <input type="checkbox" value="Comments">Comments
+          </label>
+          <label>
+            <input type="checkbox" value="Usergroup">Usergroup
+          </label>
+          <label>
+            <input type="checkbox" value="Last comment">Last comment
+          </label>
+          <label>
+            <input type="checkbox" value="Date of Birth">Date of Birth
+          </label>
+          <label>
+            <input type="checkbox" value="Signature">Signature
+          </label>
+          <label>
+            <input type="checkbox" value="Reputation given">Reputation given
+          </label>
+          <label>
+            <input type="checkbox" value="Deleted comments">Deleted comments
+          </label>
+          <label>
+            <input type="checkbox" value="Secundairy usergroup">Secundairy usergroup
+          </label>
+          <label>
+            <input type="checkbox" value="Email">Email
+          </label>
+          <label>
+            <input type="checkbox" value="Location">Location
+          </label>
+          <label>
+            <input type="checkbox" value="Notes">Notes
+          </label>
+          <label>
+            <input type="checkbox" value="Followers">Followers
+          </label>
+          <label>
+            <input type="checkbox" value="Deleted topics">Deleted topics
+          </label>
+          <label>
+            <input type="checkbox" value="Registration date">Registration date
+          </label>
+          <label>
+            <input type="checkbox" value="SSO-ID">SSO-ID
+          </label>
+          <label>
+            <input type="checkbox" value="Interest">Interest
+          </label>
+          <label>
+            <input type="checkbox" value="Badges">Badges
+          </label>
+          <label>
+            <input type="checkbox" value="Following">Following
+          </label>
+          <label>
+            <input type="checkbox" value="Questions solved">Questions solved
+          </label>
+          <label>
+            <input type="checkbox" value="Last login">Last login
+          </label>
+          <label>
+            <input type="checkbox" value="IP-address">IP-address
+          </label>
+        </div>
+      </div>
+      <div class="block controls">
+        <div class="content">
+          <button class="primary">Update</button>
+          <button class="cancel">Cancel</button>
+        </div>
+      </div>
+    </section>
+    <section><span id="tags"></span>
+      <button id="clear-tags" class="cancel">Clear selection</button>
+      <div class="pagination"><span class="link disabled">First</span><span class="link disabled">&laquo;</span><span>
+           
+          Page
+          <input type="text" value="1">of 12</span><span class="link">&raquo;</span><span class="link">Last</span>
+        <select>
+          <option value="10">10 Rows</option>
+        </select>
+      </div>
+    </section>
+    <section id="results">
+      <table>
+        <thead>
+          <tr>
+            <th>
+              <input id="select-all" type="checkbox">Username<span class="caret"></span>
+            </th>
+            <th>Comments</th>
+            <th>Topics</th>
+            <th>Usergroup</th>
+            <th>Registration date</th>
+            <th>Last login</th>
+            <th>Last comment</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <input id="select" type="checkbox"><a href="javascript:;"><img src="http://placehold.it/25x23" width="25" height="23" align="absmiddle" alt="user pic"></a><strong>Amber H.</strong><a href="javascript:;" class="target"></a>
+            </td>
+            <td class="number">64</td>
+            <td class="number">9</td>
+            <td>Registered user</td>
+            <td>19-mar-12 12:00</td>
+            <td>19-mar-12 12:00</td>
+            <td>19-mar-12 12:00</td>
+          </tr>
+          <tr>
+            <td>
+              <input id="select" type="checkbox"><a href="javascript:;"><img src="http://placehold.it/25x23" width="25" height="23" align="absmiddle" alt="user pic"></a><strong>Amber H.</strong><a href="javascript:;" class="target"></a>
+            </td>
+            <td class="number">64</td>
+            <td class="number">9</td>
+            <td>Registered user</td>
+            <td>19-mar-12 12:00</td>
+            <td>19-mar-12 12:00</td>
+            <td>19-mar-12 12:00</td>
+          </tr>
+          <tr>
+            <td>
+              <input id="select" type="checkbox"><a href="javascript:;"><img src="http://placehold.it/25x23" width="25" height="23" align="absmiddle" alt="user pic"></a><strong>Amber H.</strong><a href="javascript:;" class="target"></a>
+            </td>
+            <td class="number">64</td>
+            <td class="number">9</td>
+            <td>Registered user</td>
+            <td>19-mar-12 12:00</td>
+            <td>19-mar-12 12:00</td>
+            <td>19-mar-12 12:00</td>
+          </tr>
+          <tr>
+            <td>
+              <input id="select" type="checkbox"><a href="javascript:;"><img src="http://placehold.it/25x23" width="25" height="23" align="absmiddle" alt="user pic"></a><strong>Amber H.</strong><a href="javascript:;" class="target"></a>
+            </td>
+            <td class="number">64</td>
+            <td class="number">9</td>
+            <td>Registered user</td>
+            <td>19-mar-12 12:00</td>
+            <td>19-mar-12 12:00</td>
+            <td>19-mar-12 12:00</td>
+          </tr>
+          <tr>
+            <td>
+              <input id="select" type="checkbox"><a href="javascript:;"><img src="http://placehold.it/25x23" width="25" height="23" align="absmiddle" alt="user pic"></a><strong>Amber H.</strong><a href="javascript:;" class="target"></a>
+            </td>
+            <td class="number">64</td>
+            <td class="number">9</td>
+            <td>Registered user</td>
+            <td>19-mar-12 12:00</td>
+            <td>19-mar-12 12:00</td>
+            <td>19-mar-12 12:00</td>
+          </tr>
+          <tr>
+            <td>
+              <input id="select" type="checkbox"><a href="javascript:;"><img src="http://placehold.it/25x23" width="25" height="23" align="absmiddle" alt="user pic"></a><strong>Amber H.</strong><a href="javascript:;" class="target"></a>
+            </td>
+            <td class="number">64</td>
+            <td class="number">9</td>
+            <td>Registered user</td>
+            <td>19-mar-12 12:00</td>
+            <td>19-mar-12 12:00</td>
+            <td>19-mar-12 12:00</td>
+          </tr>
+          <tr>
+            <td>
+              <input id="select" type="checkbox"><a href="javascript:;"><img src="http://placehold.it/25x23" width="25" height="23" align="absmiddle" alt="user pic"></a><strong>Amber H.</strong><a href="javascript:;" class="target"></a>
+            </td>
+            <td class="number">64</td>
+            <td class="number">9</td>
+            <td>Registered user</td>
+            <td>19-mar-12 12:00</td>
+            <td>19-mar-12 12:00</td>
+            <td>19-mar-12 12:00</td>
+          </tr>
+          <tr>
+            <td>
+              <input id="select" type="checkbox"><a href="javascript:;"><img src="http://placehold.it/25x23" width="25" height="23" align="absmiddle" alt="user pic"></a><strong>Amber H.</strong><a href="javascript:;" class="target"></a>
+            </td>
+            <td class="number">64</td>
+            <td class="number">9</td>
+            <td>Registered user</td>
+            <td>19-mar-12 12:00</td>
+            <td>19-mar-12 12:00</td>
+            <td>19-mar-12 12:00</td>
+          </tr>
+          <tr>
+            <td>
+              <input id="select" type="checkbox"><a href="javascript:;"><img src="http://placehold.it/25x23" width="25" height="23" align="absmiddle" alt="user pic"></a><strong>Amber H.</strong><a href="javascript:;" class="target"></a>
+            </td>
+            <td class="number">64</td>
+            <td class="number">9</td>
+            <td>Registered user</td>
+            <td>19-mar-12 12:00</td>
+            <td>19-mar-12 12:00</td>
+            <td>19-mar-12 12:00</td>
+          </tr>
+          <tr>
+            <td>
+              <input id="select" type="checkbox"><a href="javascript:;"><img src="http://placehold.it/25x23" width="25" height="23" align="absmiddle" alt="user pic"></a><strong>Amber H.</strong><a href="javascript:;" class="target"></a>
+            </td>
+            <td class="number">64</td>
+            <td class="number">9</td>
+            <td>Registered user</td>
+            <td>19-mar-12 12:00</td>
+            <td>19-mar-12 12:00</td>
+            <td>19-mar-12 12:00</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="block controls">
+        <div class="content">
+          <div id="table-controls">
+            <select id="change-usergroup">
+              <option value="0">Change usergroup</option>
+              <option value="registered">Registered user</option>
+              <option value="moderator">Moderator</option>
+              <option value="super">Super-user</option>
+            </select>
+            <select id="secondary-usergroup">
+              <option value="0">Add secondary usergroup</option>
+              <option value="registered">Registered user</option>
+              <option value="moderator">Moderator</option>
+              <option value="super">Super-user</option>
+            </select>
+            <select id="permissions">
+              <option value="0">Permisions</option>
+              <option value="read">Read</option>
+              <option value="write">Read + write </option>
+              <option value="dance">Dance</option>
+            </select>
+            <button>Apply</button>
+          </div>
+          <div id="table-export">
+            <div class="loading">72%</div>
+            <button>Export to Excel</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="pagination"><span class="link disabled">First</span><span class="link disabled">&laquo;</span><span>
+           
+          Page
+          <input type="text" value="1">of 12</span><span class="link">&raquo;</span><span class="link">Last</span>
+        <select>
+          <option value="10">10 Rows</option>
+        </select>
+      </div>
+    </section>
+  </div>
+  <script type="text/javascript" src="js/jquery-3.1.0.slim.min.js"></script>
+  <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="js/selects.js"></script>
+  <script type="text/javascript" src="js/behavior.js"></script>
+</html>

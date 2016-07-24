@@ -1,0 +1,143 @@
+doctype html
+html
+  head
+    title Slice
+    
+    link(rel="stylesheet", href="css/style.min.css")
+  body
+    header
+      //span INSIDED
+      nav
+        //ul
+          li Analitycs
+          li Moderation
+          li.active.open Users
+            ul
+              li.active Overview
+              li Custom filter
+              li Create new User
+          li Settings
+          li Blog
+          li Onderzoek
+          li Inklappen
+        
+  #main
+    section#search
+      .block
+        p.title Advanced search
+        .content
+          #filters
+            .filter-row(data-row="0")
+              select.filter
+                option(value="0") Choose a filter
+                option(value="comments") Comments
+                option(value="usergroup") Usergroup
+                option(value="registration_date") Registration date
+                option(value="last_login") Last login
+                option(value="last_comment") Last comment
+          button#add-filter.success Add row
+      .block
+        p.title Columns
+        .content
+          -
+            columns = ['Usertitle',    	    'Topics',	               'Logins',	      'Gender',	        'Profession',	 'Reputation received',
+                       'Comments',	        'Usergroup',	           'Last comment',	'Date of Birth',	'Signature',	 'Reputation given',
+                       'Deleted comments',	'Secundairy usergroup',	 'Email',	        'Location',	      'Notes',	     'Followers',
+                       'Deleted topics',	  'Registration date',	   'SSO-ID',	      'Interest',	      'Badges',	     'Following',
+                       'Questions solved',	'Last login',	           'IP-address']
+          each column in columns
+            label
+              input(type="checkbox", value=column)
+              =column
+      .block.controls
+        .content
+          button.primary Update
+          button.cancel Cancel
+    
+    section
+      span#tags
+      button#clear-tags.cancel Clear selection
+      .pagination
+        span.link.disabled First
+        span.link.disabled &laquo;
+        span 
+          | Page
+          input(type="text", value="1")
+          | of 12
+        span.link &raquo;
+        span.link Last
+        select
+          option(value="10") 10 Rows
+          
+    section#results
+      table
+        thead
+          tr
+            th
+              input#select-all(type="checkbox")
+              | Username
+              span.caret
+            th Comments
+            th Topics
+            th Usergroup
+            th Registration date
+            th Last login
+            th Last comment
+        tbody
+          - i = 0
+          while i < 10
+            tr
+              td
+                input#select(type="checkbox")
+                a(href="javascript:;")
+                  img(src="http://placehold.it/25x23", width="25", height="23", align="absmiddle", alt="user pic")
+                strong Amber H.
+                a.target(href="javascript:;")
+              td.number 64
+              td.number 9
+              td Registered user
+              td 19-mar-12 12:00
+              td 19-mar-12 12:00
+              td 19-mar-12 12:00
+              - i++
+      .block.controls
+        .content
+          #table-controls
+            select#change-usergroup
+              option(value="0") Change usergroup
+              option(value="registered") Registered user
+              option(value="moderator") Moderator
+              option(value="super") Super-user
+            select#secondary-usergroup
+              option(value="0") Add secondary usergroup
+              option(value="registered") Registered user
+              option(value="moderator") Moderator
+              option(value="super") Super-user
+            select#permissions
+              option(value="0") Permisions
+              option(value="read") Read
+              option(value="write") Read + write 
+              option(value="dance") Dance
+            button Apply
+          #table-export
+            .loading 72%
+            button Export to Excel
+        
+    section
+      .pagination
+        span.link.disabled First
+        span.link.disabled &laquo;
+        span 
+          | Page
+          input(type="text", value="1")
+          | of 12
+        span.link &raquo;
+        span.link Last
+        select
+          option(value="10") 10 Rows
+
+  script(type="text/javascript", src="js/jquery-3.1.0.slim.min.js")
+  script(type="text/javascript", src="js/jquery-ui.min.js")
+  script(type="text/javascript", src="js/selects.js")
+  script(type="text/javascript", src="js/behavior.js")
+  

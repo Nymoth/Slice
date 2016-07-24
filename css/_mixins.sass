@@ -1,0 +1,33 @@
+=button-style()
+  background: $gray-gradient
+  border: 1px solid $border-color
+  border-radius: 2px
+  display: inline-block
+  margin: 5px 5px 5px 0
+  padding: 6px
+  font-size: 12px
+
+=ellipsis()
+  overflow: hidden
+  text-overflow: ellipsis
+  white-space: nowrap
+
+=arrow-up($size, $color)
+  border: $size solid rgba(0,0,0,0)
+  border-bottom-color: $color
+=arrow-down($size, $color)
+  border: $size solid rgba(0,0,0,0)
+  border-top-color: $color
+=arrow-left($size, $color)
+  border: $size solid rgba(0,0,0,0)
+  border-right-color: $color
+=arrow-right($size, $color)
+  border: $size solid rgba(0,0,0,0)
+  border-left-color: $color
+
+=cross-symbol()
+  content: "'"
+  font-family: "Web Symbols"
+=loading-symbol()
+  content: '1'
+  font-family: "Web Symbols"
